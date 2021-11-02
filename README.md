@@ -8,7 +8,7 @@ sistema que permita analizar el comportamiento de organizaciones multi-agente en
 etapa de diseño. Organizaciones multi-agente se modelan empleando una
 versión modificada del meta-modelo OMACS (ver Figura 1). 
 
-!
+![Figura1](src/Imagenes/figura1.PNG)
 
 Cada nodo, vértice, representa un elemento de la organización: Agents, Cababilities,
 Roles, y Goals. Cada nodo se identifica con un identificador único. Cada arco, o arista,
@@ -34,7 +34,7 @@ Eliminar un objeto (elemento o relación).
 cada objeto. Es decir, sus coordenadas.
 
 ## Ilustraciones
-- Menú y editor gráfico
-!
-- Modelo de la organización multi-agente
-!
+### Menú y editor gráfico
+![Menu y editor gráfico](src/Imagenes/ilustracion-editor.PNG)
+### Modelo de la organización multi-agente
+![Figura1](src/Imagenes/figura1.PNG)
