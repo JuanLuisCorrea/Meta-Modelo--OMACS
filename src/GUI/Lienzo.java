@@ -68,6 +68,10 @@ public class Lienzo extends JPanel implements MouseListener, MouseMotionListener
             if(MainWindow.botonSeleccionado.compareTo("Agent") == 0) {
                 String nombre = JOptionPane.showInputDialog("Nombre del elemento");
                 String costo = JOptionPane.showInputDialog("Costo del agente");
+                if(Float.parseFloat(costo) <= -0.0) {
+                    JOptionPane.showMessageDialog(null, "El costo no puede tener un valor negativo");
+                    return;
+                }
                 getListaNodos().add(new Agent(x, y, nombre, costo));
                 repaint();//Llama el método paint() para dibujar el array con el nuevo elemento
             }
@@ -108,7 +112,7 @@ public class Lienzo extends JPanel implements MouseListener, MouseMotionListener
                             }
                             p2 = new Point(nodo.getCentroX(),nodo.getCentroY());
                             String valor = JOptionPane.showInputDialog("Valor del Possess");
-                            if(Float.parseFloat(valor) < 0.0 || Float.parseFloat(valor) > 1.0) {
+                            if(Float.parseFloat(valor) <= -0.0 || Float.parseFloat(valor) > 1.0) {
                                 JOptionPane.showMessageDialog(this, "El valor debe ser un número entre 0.0 y 1.0");
                                 p1 = null; 
                                 break;
